@@ -5,8 +5,8 @@ from ..items import YahoocrawlerItem
 
 class AlphacrawlerSpider(scrapy.Spider):
     name = 'alphacrawler'
-    allowed_domains = ['****.com']
-    start_urls = ['***/market-news/all']
+    allowed_domains = ['****']
+    start_urls = ['****']
 
     def parse(self, response):
         DontAddStrings=["See","Previously:","Press Release","Source","Payable"]

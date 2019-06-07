@@ -4,8 +4,8 @@ import scrapy
 
 class WordolicrawlerSpider(scrapy.Spider):
     name = 'wordolicrawler'
-    allowed_domains = ['***']
-    start_urls = ['***']
+    allowed_domains = ['****']
+    start_urls = ['****']
 
     def parse(self, response):
         news = response.css('.article a::text').extract()
