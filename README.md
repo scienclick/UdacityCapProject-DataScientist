@@ -8,10 +8,10 @@ It worth mentioning that Kaggle also is running a similar competition, and this 
 
 ## Usage example
 
-This cane be served as a backend for any webpage that tries to make draw parralels betwenn stock movement and news
+This can be served as a backend for any webpage that tries to make draw parallels between stock movement and news
 ## Disclaimer:
 
-This analysis should NOT be taken as financial advice . Needles to say that market complexities cannot be captured by general analysis.
+This analysis should NOT be taken as financial advice. Needless to say, that market complexities cannot be captured by general analysis.
 
 ## Requirements
 
@@ -28,13 +28,20 @@ The major libraries used in these projects are:
 
 ## File structure
 
-There are 3 folders and a file in this project:
-1. newsbackend: folder containing Django project
-2. scraper: folder containig spider crawler project in using Scrapy
-3. Model.ipynb: a notebook used to work and train a model
+This project has three major components:
 
-## References
+- Scraping news: For this purpose, Scrappy library is used in python. Every 1 hour a Crontab job automatically reads news from few news pages.
 
-http://142.93.32.119/
+- prediction using ML algorithms: Current note book shows some fundamental ML approaches, that I had taken in in order to come up with a reasonable model.
 
+- Serving the results in a backend server: The data is stored in a Linux based virtual private server, using Django Rest Framework.
 
+## Project results
+
+The final back-end can be found in the following url:
+
+http://142.93.32.119/api/
+
+it contains two endpoints; news in which news has been stored. Here up and down fields actually are the probability prediction of the ML model (developed in this notebook) based on the news content. For example, "up"=0.6 means that the news content is 60% likely to be a positive news associated with increasing stock.
+
+The other endpoint entity where the entities of each news has been stored for statistical purposes./
