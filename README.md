@@ -41,6 +41,7 @@ This project has three major components:
 The final back-end can be found in the following url:
 
 http://142.93.32.119/
+http://134.209.177.21/
 
 it contains two endpoints; news in which news has been stored. Here up and down fields actually are the probability prediction of the ML model (developed in this notebook) based on the news content. For example, "up"=0.6 means that the news content is 60% likely to be a positive news associated with increasing stock.
 
